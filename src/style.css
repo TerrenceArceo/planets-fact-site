@@ -6,24 +6,22 @@
 
 html {
     font-family: 'Antonio', sans-serif;
+    /* font-family: 'Spartan', sans-serif; */
     color: #fff;
     font-weight: 400;
 }
 
 body {
     margin: 0;
-    background: url(./starter-code/assets/background-stars.svg) no-repeat;
+    background: url(./starter-code/assets/background-stars.svg);
     background-color: #070724;
     background-size: cover;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #38384f;
+    padding-inline: 1.5em;
 }
