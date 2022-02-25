@@ -14,15 +14,19 @@ html {
     font-weight: 400;
 }
 
-h3, h4, button, p {
-    font-family: 'Spartan', sans-serif;
-}
-
 body {
     margin: 0;
     background: url(./starter-code/assets/background-stars.svg);
     background-color: #070724;
     background-size: cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+h3, h4, button, p {
+    font-family: 'Spartan', sans-serif;
 }
 
 button {
@@ -48,6 +52,10 @@ button {
     border-bottom: 1px solid #38384f;
     padding-inline: 1.5em;
 }
+
+/* --------- */
+/* Main body */
+/* --------- */
 
 .main-body {
     display: grid;
@@ -90,4 +98,57 @@ button {
     font-size: 11px;
     line-height: 22px;
     font-weight: 400;
+}
+
+/* --------- */
+/* 320 and above tablet size query */
+/* --------- */
+
+@media (min-width: 320px) {
+    .main-body {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 470px auto;
+        grid-template-areas: 
+            "planet planet"
+            "info buttons";
+    }
+
+    .info {
+        text-align: left;
+    }
+
+    .info-buttons {
+        flex-direction: column;
+    }
+
+    .img-planet {
+        justify-self: center;
+    }
+}
+
+/* --------- */
+/* 768 and above, Desktop size query */
+/* --------- */
+
+@media (min-width: 768px) {
+    .main-body {
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "planet info"
+            "planet buttons";
+    }
+
+    .info {
+        text-align: left;
+    }
+
+    .info-buttons {
+        flex-direction: column;
+        
+    }
+
+    .img-planet {
+        justify-self: center;
+    }
 }

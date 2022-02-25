@@ -1,6 +1,7 @@
 import source from '../starter-code/assets/icon-source.svg'
 
 export default function Body() {
+
     return (
         <div className="main-body">
             <div className="info-buttons">
