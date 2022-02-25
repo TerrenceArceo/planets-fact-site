@@ -25,7 +25,7 @@ img {
     max-width: 100%;
 }
 
-h3, h4, button, p {
+h4, button, p {
     font-family: 'Spartan', sans-serif;
 }
 
@@ -60,11 +60,12 @@ button {
 .main-body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 312px auto;
+    grid-template-rows: auto 312px auto auto;
     grid-template-areas: 
         "buttons buttons buttons"
         "....... planet ........"
-        "info info info";
+        "info info info"
+        "footer footer footer";
 }
 
 .info-buttons {
@@ -83,6 +84,35 @@ button {
     grid-area: info;
     text-align: center;
     padding-inline: 2em;
+}
+
+.footer {
+    grid-area: footer;
+    padding-inline: 2em;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #38384f;
+    padding-inline: 1em;
+}
+
+.footer-info + .footer-info {
+    margin-top: 10px;
+}
+
+.footer-info p {
+    text-transform: uppercase;
+    font-size: 8px;
+    color: #838391;
+    letter-spacing: 0.727273px;
+}
+
+.footer-info h3 {
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .wiki-link {
@@ -104,13 +134,14 @@ button {
 /* 320 and above tablet size query */
 /* --------- */
 
-@media (min-width: 320px) {
+@media (min-width: 480px) {
     .main-body {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 470px auto;
+        grid-template-rows: 470px auto auto;
         grid-template-areas: 
             "planet planet"
-            "info buttons";
+            "info buttons"
+            "footer footer";
     }
 
     .info {
@@ -136,7 +167,8 @@ button {
         grid-template-rows: auto auto;
         grid-template-areas: 
             "planet info"
-            "planet buttons";
+            "planet buttons"
+            "footer footer";
     }
 
     .info {
