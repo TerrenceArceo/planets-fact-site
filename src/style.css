@@ -68,7 +68,7 @@ button {
         "footer footer footer";
 
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1400px;
     width: 90%;
 }
 
@@ -167,6 +167,7 @@ button {
 
     .footer {
         display: flex;
+        gap: 1em;
     }
 
     .footer-info h3 { 
@@ -183,13 +184,16 @@ button {
         margin-top: 0;
         margin-left: auto;
     }
+
+    .title { font-size: 48px;}
+    .footer-info h3 { font-size: 24px;}
 }
 
 /* --------- */
 /* 768 and above, Desktop size query */
 /* --------- */
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
     .main-body {
         grid-template-columns: 60% 40%;
         grid-template-rows: 350px 350px auto;
@@ -226,4 +230,8 @@ button {
     .footer-info {
        flex-grow: 1;
     }
+
+    .title { font-size: 80px; }
+    .description { font-size: 14px; }
+    .footer-info h3 { font-size: 40px;}
 }
