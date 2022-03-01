@@ -41,6 +41,8 @@ button {
     cursor: pointer;
 }
 
+.container { height: 100vh; }
+
 /* --------- */
 /* Header */
 /* --------- */
@@ -66,10 +68,6 @@ button {
         "....... planet ........"
         "info info info"
         "footer footer footer";
-
-    margin: 0 auto;
-    max-width: 1400px;
-    width: 90%;
 }
 
 .info-buttons {
@@ -92,6 +90,7 @@ button {
 
 .footer {
     grid-area: footer;
+    padding-inline: 2em;
 }
 
 .footer-info {
@@ -136,7 +135,7 @@ button {
 }
 
 /* --------- */
-/* 320 and above tablet size query */
+/* 480 and above tablet size query */
 /* --------- */
 
 @media (min-width: 480px) {
@@ -148,6 +147,9 @@ button {
             "info buttons"
             "footer footer";
         gap: 1em;
+        margin: 0 auto;
+        max-width: 1400px;
+        width: 90%;
     }
 
     .info {
@@ -196,7 +198,7 @@ button {
 @media (min-width: 850px) {
     .main-body {
         grid-template-columns: 60% 40%;
-        grid-template-rows: 350px 350px auto;
+        grid-template-rows: minmax(auto, 340px) minmax(auto, 340px) auto;
         grid-template-areas: 
             "planet info"
             "planet buttons"
@@ -231,7 +233,10 @@ button {
        flex-grow: 1;
     }
 
-    .title { font-size: 80px; }
+    .title { 
+        font-size: 80px;
+        margin-bottom: 20px;
+    }
     .description { font-size: 14px; }
     .footer-info h3 { font-size: 40px;}
 }
