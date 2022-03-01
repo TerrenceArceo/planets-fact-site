@@ -66,6 +66,10 @@ button {
         "....... planet ........"
         "info info info"
         "footer footer footer";
+
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
 }
 
 .info-buttons {
@@ -88,7 +92,6 @@ button {
 
 .footer {
     grid-area: footer;
-    padding-inline: 2em;
 }
 
 .footer-info {
@@ -97,6 +100,7 @@ button {
     justify-content: space-between;
     border: 1px solid #38384f;
     padding-inline: 1em;
+    min-width: 164px;
 }
 
 .footer-info + .footer-info {
@@ -108,6 +112,7 @@ button {
     font-size: 8px;
     color: #838391;
     letter-spacing: 0.727273px;
+    margin-top: 20px;
 }
 
 .footer-info h3 {
@@ -142,6 +147,7 @@ button {
             "planet planet"
             "info buttons"
             "footer footer";
+        gap: 1em;
     }
 
     .info {
@@ -150,10 +156,32 @@ button {
 
     .info-buttons {
         flex-direction: column;
+        border-bottom: none;
+        justify-content: center;
+        gap: 20px;
     }
 
     .img-planet {
         justify-self: center;
+    }
+
+    .footer {
+        display: flex;
+    }
+
+    .footer-info h3 { 
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-info + .footer-info {
+        margin-top: 0;
+        margin-left: auto;
     }
 }
 
@@ -164,7 +192,7 @@ button {
 @media (min-width: 768px) {
     .main-body {
         grid-template-columns: 60% 40%;
-        grid-template-rows: auto auto;
+        grid-template-rows: 350px 350px auto;
         grid-template-areas: 
             "planet info"
             "planet buttons"
@@ -172,15 +200,30 @@ button {
     }
 
     .info {
-        text-align: left;
+        align-self: flex-end;
+        padding-inline: 0;
     }
 
     .info-buttons {
         flex-direction: column;
-        
+        border-bottom: none;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .info-buttons button {
+        border: 1px solid #38384f;
     }
 
     .img-planet {
         justify-self: center;
+    }
+
+    .footer {
+        gap: 1em;
+    }
+
+    .footer-info {
+       flex-grow: 1;
     }
 }
