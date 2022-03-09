@@ -21,11 +21,9 @@ body {
     background-size: cover;
 }
 
-img {
-    max-width: 100%;
-}
+img { max-width: 100%;}
 
-h4, button, p {
+h4, button, p, a {
     font-family: 'Spartan', sans-serif;
 }
 
@@ -128,6 +126,7 @@ button {
 
 .title {
     font-size: 40px;
+    text-transform: uppercase;
 }
 
 .description {
@@ -135,6 +134,13 @@ button {
     line-height: 22px;
     font-weight: 400;
 }
+
+.header-navigation-planets {
+    display: none;
+}
+
+
+
 
 /* --------- */
 /* 480 and above tablet size query */
@@ -153,6 +159,11 @@ button {
         max-width: 1400px;
         width: 90%;
     }
+
+    .header { 
+        flex-direction: column;
+    }
+
 
     .info {
         text-align: left;
@@ -196,6 +207,25 @@ button {
 
     .title { font-size: 48px;}
     .footer-info h3 { font-size: 24px;}
+    .hamburger { display: none; }
+
+    .header-navigation-planets {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: 1px;
+        display: block;
+        padding-bottom: 1.5em;
+    }
+    
+    .header-navigation-planets a {
+        text-decoration: none;
+        color: #838391;
+        margin-left: 1em;
+    }
+
+    .header-navigation-planets a:hover,
+    .header-navigation-planets a:focus { color: #fff;} 
 }
 
 /* --------- */
@@ -211,6 +241,8 @@ button {
             "planet buttons"
             "footer footer";
     }
+
+    .header { flex-direction: row;}
 
     .info {
         display: flex;
@@ -239,4 +271,5 @@ button {
     }
     .description { font-size: 14px; }
     .footer-info h3 { font-size: 40px;}
+    .header-navigation-planets { padding-bottom: 0; }
 }

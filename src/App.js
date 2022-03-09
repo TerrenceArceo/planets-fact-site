@@ -62,7 +62,35 @@ function App() {
       <Routes>
         <Route 
           path="/" 
-          element={ <Mercury>{body(5)}</Mercury> }
+          element={ <Mercury>{body(0)}</Mercury> }
+        />
+        <Route 
+          path="/Venus" 
+          element={ <Venus>{body(1)}</Venus> }
+        />
+        <Route 
+          path="/Earth" 
+          element={ <Earth>{body(2)}</Earth> }
+        />
+        <Route 
+          path="/Mars" 
+          element={ <Mars>{body(3)}</Mars> }
+        />
+        <Route 
+          path="/Jupiter" 
+          element={ <Jupiter>{body(4)}</Jupiter> }
+        />
+        <Route 
+          path="/Saturn" 
+          element={ <Saturn>{body(5)}</Saturn> }
+        />
+        <Route 
+          path="/Uranus" 
+          element={ <Uranus>{body(6)}</Uranus> }
+        />
+        <Route 
+          path="/Neptune" 
+          element={ <Neptune>{body(7)}</Neptune> }
         />
       </Routes>
 
@@ -72,8 +100,3 @@ function App() {
 }
 
 export default App;
-
-
-// we will try to use props.children and we will only have one body.
-// and then to avoid repetition of code, we will create a single function that handles all of that, that takes in a parameter which is the index
-// so everytime we press a different planet, we will input the index of that planet and re-render the body.
