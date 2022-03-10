@@ -2,12 +2,12 @@
 
 import { Link } from 'react-router-dom'
 
-export default function Header() {
+export default function Header(props) {
     return (
         <nav className='header'>
             <h2>THE PLANETS</h2>
             <div className="header-navigation">
-                <img src="/assets/icon-hamburger.svg" alt='hamburger' className="hamburger"/>
+                <img src="/assets/icon-hamburger.svg" alt='hamburger' className="hamburger" onClick={() => props.toggler()}/>
                 <div className="header-navigation-planets">
                     <Link to="/">Mercury</Link>
                     <Link to="Venus">Venus</Link>

@@ -21,7 +21,7 @@ body {
     background-size: cover;
 }
 
-img { max-width: 100%;}
+img { max-width: 100%; }
 
 h4, button, p, a {
     font-family: 'Spartan', sans-serif;
@@ -91,6 +91,7 @@ button {
 .footer {
     grid-area: footer;
     padding-inline: 2em;
+    padding-bottom: 2em;
 }
 
 .footer-info {
@@ -198,6 +199,7 @@ button {
     .footer-info {
         flex-direction: column;
         align-items: flex-start;
+        flex-shrink: 0;
     }
 
     .footer-info + .footer-info {

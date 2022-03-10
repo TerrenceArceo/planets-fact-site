@@ -16,6 +16,12 @@ import Venus from './MainComponents/planets/Venus'
 
 function App() {
   const [planets, setPlanets] = useState(Data)
+  const [isShown, setIsShown] = useState(false)
+
+  function toggleNav() {
+    setIsShown(isShown => !isShown)
+    console.log(isShown)
+  }
 
   function body(index) {
     const planet = planets[index]
@@ -57,7 +63,7 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
+      <Header toggler={toggleNav} />
 
       <Routes>
         <Route 
