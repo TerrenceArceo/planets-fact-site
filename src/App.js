@@ -1,6 +1,6 @@
 
 import {useState} from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import Header from "./MainComponents/Header";
 import Body from './MainComponents/Body'
 import Data from './data.json'
@@ -65,41 +65,53 @@ function App() {
     <div className="container">
       <Header toggler={toggleNav} />
 
-      <Routes>
-        <Route 
-          path="/" 
-          element={ <Mercury>{body(0)}</Mercury> }
-        />
-        <Route 
-          path="/Venus" 
-          element={ <Venus>{body(1)}</Venus> }
-        />
-        <Route 
-          path="/Earth" 
-          element={ <Earth>{body(2)}</Earth> }
-        />
-        <Route 
-          path="/Mars" 
-          element={ <Mars>{body(3)}</Mars> }
-        />
-        <Route 
-          path="/Jupiter" 
-          element={ <Jupiter>{body(4)}</Jupiter> }
-        />
-        <Route 
-          path="/Saturn" 
-          element={ <Saturn>{body(5)}</Saturn> }
-        />
-        <Route 
-          path="/Uranus" 
-          element={ <Uranus>{body(6)}</Uranus> }
-        />
-        <Route 
-          path="/Neptune" 
-          element={ <Neptune>{body(7)}</Neptune> }
-        />
-      </Routes>
 
+      {isShown ? 
+        <div onClick={toggleNav}>
+          <Link to="/">Mercury</Link>
+          <Link to="Venus">Venus</Link>
+          <Link to="Earth">Earth</Link>
+          <Link to="Mars">Mars</Link>
+          <Link to="Jupiter">Jupiter</Link>
+          <Link to="Saturn">Saturn</Link>
+          <Link to="Uranus">Uranus</Link>
+          <Link to="Neptune">Neptune</Link>
+        </div> :
+        <Routes>
+          <Route 
+            path="/" 
+            element={ <Mercury>{body(0)}</Mercury> }
+          />
+          <Route 
+            path="/Venus" 
+            element={ <Venus>{body(1)}</Venus> }
+          />
+          <Route 
+            path="/Earth" 
+            element={ <Earth>{body(2)}</Earth> }
+          />
+          <Route 
+            path="/Mars" 
+            element={ <Mars>{body(3)}</Mars> }
+          />
+          <Route 
+            path="/Jupiter" 
+            element={ <Jupiter>{body(4)}</Jupiter> }
+          />
+          <Route 
+            path="/Saturn" 
+            element={ <Saturn>{body(5)}</Saturn> }
+          />
+          <Route 
+            path="/Uranus" 
+            element={ <Uranus>{body(6)}</Uranus> }
+          />
+          <Route 
+            path="/Neptune" 
+            element={ <Neptune>{body(7)}</Neptune> }
+          />
+        </Routes>
+      }
 
     </div>
   );
