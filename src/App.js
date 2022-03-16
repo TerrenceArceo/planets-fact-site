@@ -67,15 +67,56 @@ function App() {
 
 
       {isShown ? 
-        <div onClick={toggleNav}>
-          <Link to="/">Mercury</Link>
-          <Link to="Venus">Venus</Link>
-          <Link to="Earth">Earth</Link>
-          <Link to="Mars">Mars</Link>
-          <Link to="Jupiter">Jupiter</Link>
-          <Link to="Saturn">Saturn</Link>
-          <Link to="Uranus">Uranus</Link>
-          <Link to="Neptune">Neptune</Link>
+        <div onClick={toggleNav} className="mobile-nav">
+
+          <div className='mercury'>
+            <span className='mercury-dot'></span>
+            <Link to="/">Mercury</Link>
+            <img src='/assets/icon-chevron.svg'/>
+          </div>
+
+          <div className='venus'>
+            <span className='venus-dot'></span>
+            <Link to="Venus">Venus</Link>
+            <img src='/assets/icon-chevron.svg'/>
+          </div>
+
+          <div className='earth'>
+            <span className='earth-dot'></span>
+            <Link to="Earth">Earth</Link>
+            <img src='/assets/icon-chevron.svg'/>
+          </div>
+
+          <div className='mars'>
+            <span className='mars-dot'></span>
+            <Link to="Mars">Mars</Link>
+            <img src='/assets/icon-chevron.svg'/>
+          </div>
+
+          <div className='jupiter'>
+            <span className='jupiter-dot'></span>
+            <Link to="Jupiter">Jupiter</Link>
+            <img src='/assets/icon-chevron.svg'/>
+          </div>
+
+          <div className='saturn'>
+            <span className='saturn-dot'></span>
+            <Link to="Saturn">Saturn</Link>
+            <img src='/assets/icon-chevron.svg'/>
+          </div>
+
+          <div className='uranus'>
+            <span className='uranus-dot'></span>
+            <Link to="Uranus">Uranus</Link>
+            <img src='/assets/icon-chevron.svg'/>
+          </div>
+
+          <div className='neptune'>
+            <span className='neptune-dot'></span>
+            <Link to="Neptune">Neptune</Link>
+            <img src='/assets/icon-chevron.svg'/>
+          </div>
+
         </div> :
         <Routes>
           <Route 
