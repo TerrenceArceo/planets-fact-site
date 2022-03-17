@@ -17,6 +17,7 @@ import Venus from './MainComponents/planets/Venus'
 function App() {
   const [planets, setPlanets] = useState(Data)
   const [isShown, setIsShown] = useState(false)
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
   function toggleNav() {
     setIsShown(isShown => !isShown)
