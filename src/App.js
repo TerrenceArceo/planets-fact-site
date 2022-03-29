@@ -1,6 +1,6 @@
 
-import {useState} from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import {useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from "./MainComponents/Header";
 import Body from './MainComponents/Body'
 import Data from './data.json'
@@ -16,13 +16,6 @@ import Venus from './MainComponents/planets/Venus'
 
 function App() {
   const [planets, setPlanets] = useState(Data)
-  const [isShown, setIsShown] = useState(false)
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-
-  function toggleNav() {
-    setIsShown(isShown => !isShown)
-    console.log(isShown)
-  }
 
   function body(index) {
     const planet = planets[index]
@@ -64,61 +57,8 @@ function App() {
 
   return (
     <div className="container">
-      <Header toggler={toggleNav} />
+      <Header />
 
-
-      {isShown ? 
-        <div onClick={toggleNav} className="mobile-nav">
-
-          <div className='mercury'>
-            <span className='mercury-dot'></span>
-            <Link to="/">Mercury</Link>
-            <img src='/assets/icon-chevron.svg'/>
-          </div>
-
-          <div className='venus'>
-            <span className='venus-dot'></span>
-            <Link to="Venus">Venus</Link>
-            <img src='/assets/icon-chevron.svg'/>
-          </div>
-
-          <div className='earth'>
-            <span className='earth-dot'></span>
-            <Link to="Earth">Earth</Link>
-            <img src='/assets/icon-chevron.svg'/>
-          </div>
-
-          <div className='mars'>
-            <span className='mars-dot'></span>
-            <Link to="Mars">Mars</Link>
-            <img src='/assets/icon-chevron.svg'/>
-          </div>
-
-          <div className='jupiter'>
-            <span className='jupiter-dot'></span>
-            <Link to="Jupiter">Jupiter</Link>
-            <img src='/assets/icon-chevron.svg'/>
-          </div>
-
-          <div className='saturn'>
-            <span className='saturn-dot'></span>
-            <Link to="Saturn">Saturn</Link>
-            <img src='/assets/icon-chevron.svg'/>
-          </div>
-
-          <div className='uranus'>
-            <span className='uranus-dot'></span>
-            <Link to="Uranus">Uranus</Link>
-            <img src='/assets/icon-chevron.svg'/>
-          </div>
-
-          <div className='neptune'>
-            <span className='neptune-dot'></span>
-            <Link to="Neptune">Neptune</Link>
-            <img src='/assets/icon-chevron.svg'/>
-          </div>
-
-        </div> :
         <Routes>
           <Route 
             path="/" 
@@ -153,7 +93,6 @@ function App() {
             element={ <Neptune>{body(7)}</Neptune> }
           />
         </Routes>
-      }
 
     </div>
   );

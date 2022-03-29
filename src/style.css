@@ -55,55 +55,54 @@ button {
 /* Header */
 /* --------- */
 
-.header {
+.header-navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #38384f;
     padding-inline: 1.5em;
+    border-bottom: 1px solid #38384f;
 }
 
 .header-navigation-planets {
-    display: none;
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    background-color: #070724;
+    width: 100vw;
 }
 
-.mobile-nav a {
-    display: inline-block;
+.header-navigation-planets a {
+    padding: 2.6em 0;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 1.36px;
     font-size: 15px;
     font-weight: 700;
-    letter-spacing: 1.36px;
     color: #fff;
-    margin-right: auto;
-    padding: 2em 10em 2em 2em;
-}
-
-.mobile-nav span {
-    display: inline-block;
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.mercury-dot { background-color: var(--clr-mercury);}
-.venus-dot { background-color: var(--clr-venus);}
-.earth-dot { background-color: var(--clr-earth);}
-.mars-dot { background-color: var(--clr-mars);}
-.jupiter-dot { background-color: var(--clr-jupiter);}
-.saturn-dot { background-color: var(--clr-saturn);}
-.uranus-dot { background-color: var(--clr-uranus);}
-.neptune-dot { background-color: var(--clr-neptune);}
-
-.mobile-nav div {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    align-items: center;
     border-bottom: 1px solid #38384f;
+    width: 330px;
 }
+
+.planet {
+    display: flex;
+    align-items: center;
+}
+
+.planet span {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.mercury-dot { background-color: var(--clr-mercury); }
+.venus-dot { background-color: var(--clr-venus); }
+.earth-dot { background-color: var(--clr-earth); }
+.mars-dot { background-color: var(--clr-mars); }
+.jupiter-dot { background-color: var(--clr-jupiter); }
+.saturn-dot { background-color: var(--clr-saturn); }
+.uranus-dot { background-color: var(--clr-uranus); }
+.neptune-dot { background-color: var(--clr-neptune); }
 
 
 /* --------- */
@@ -205,10 +204,39 @@ button {
         width: 90%;
     }
 
-    .header { 
+    .header {
+        display: flex;
         flex-direction: column;
+        border-bottom: 1px solid #38384f;
     }
 
+    .header-navigation {
+        border-bottom: none;
+        justify-content: center;
+    }
+
+    .header-navigation-planets {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        justify-content: space-evenly;
+        margin-left: -20px;
+    }
+
+    .header-navigation-planets a {
+        padding: 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 11px;
+        font-weight: 700;
+        color: #fff;
+        border-bottom: none;
+        width: auto;
+    }
+
+    .planet span { display: none ;}
+    .chevron { display: none; }
 
     .info {
         text-align: left;
@@ -254,24 +282,6 @@ button {
     .title { font-size: 48px;}
     .footer-info h3 { font-size: 24px;}
     .hamburger { display: none; }
-
-    .header-navigation-planets {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 11px;
-        letter-spacing: 1px;
-        display: block;
-        padding-bottom: 1.5em;
-    }
-    
-    .header-navigation-planets a {
-        text-decoration: none;
-        color: #838391;
-        margin-left: 1em;
-    }
-
-    .header-navigation-planets a:hover,
-    .header-navigation-planets a:focus { color: #fff;} 
 }
 
 /* --------- */
@@ -288,7 +298,20 @@ button {
             "footer footer";
     }
 
-    .header { flex-direction: row;}
+    .header { 
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-navigation-planets {
+        flex-direction: row;
+        position: static;
+        width: auto;
+    }
+
+    .header-navigation-planets a {
+        margin-right: 25px;
+    }
 
     .info {
         display: flex;
