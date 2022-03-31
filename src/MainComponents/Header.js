@@ -6,13 +6,17 @@ import { Link } from 'react-router-dom'
 export default function Header(props) {
     const [isShown, setIsShown] = useState(false)
 
+    function toggleNav() {
+        setIsShown(prevState => !prevState)
+    }
+
     return (
         <nav className='header'>
             <div className="header-navigation">
                 <h2>THE PLANETS</h2>
-                <img src="/assets/icon-hamburger.svg" alt='hamburger' className="hamburger"/>
+                <img src="/assets/icon-hamburger.svg" alt='hamburger' className="hamburger" onClick={toggleNav}/>
             </div>
-            <ul className="header-navigation-planets">
+            {isShown && <ul className="header-navigation-planets">
                 <li className='planet'>
                     <span className='mercury-dot'></span>
                     <Link to="/">Mercury</Link>
@@ -53,7 +57,7 @@ export default function Header(props) {
                     <Link to="Neptune">Neptune</Link>
                     <img src='/assets/icon-chevron.svg' className='chevron' />
                 </li>
-            </ul>
+            </ul>}
         </nav>
     )
 }
