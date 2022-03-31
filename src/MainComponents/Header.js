@@ -1,8 +1,11 @@
 // import hamburger from '/assets/icon-hamburger.svg'
 
+import {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Header(props) {
+    const [isShown, setIsShown] = useState(false)
+
     return (
         <nav className='header'>
             <div className="header-navigation">

@@ -2,7 +2,6 @@
 import {useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from "./MainComponents/Header";
-import Body from './MainComponents/Body'
 import Data from './data.json'
 
 import Earth from './MainComponents/planets/Earth'
