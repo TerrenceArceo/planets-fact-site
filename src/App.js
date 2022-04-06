@@ -23,11 +23,19 @@ function App() {
 
     return (
       <div className="main-body">
-            <ul className="info-buttons">
-                <li><button>Overview</button></li>
-                <li><button>Structure</button></li>
-                <li><button>Surface</button></li>
-            </ul>
+            {size.width < 480 ? 
+              <ul className="info-buttons">
+                  <li><button>Overview</button></li>
+                  <li><button>Structure</button></li>
+                  <li><button>Surface</button></li>
+              </ul> 
+              :
+              <ol className="BS-info-buttons">
+                  <li className='button-one'><button>Overview</button></li>
+                  <li className='button-two'><button>Internal structure</button></li>
+                  <li className='button-three'><button>Surface Geology</button></li>
+              </ol>
+            }
             <img src={planet.images.planet} alt="mercury" className="img-planet" />
             <div className="info">
                 <h1 className="title">{planet.name}</h1>

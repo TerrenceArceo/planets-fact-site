@@ -247,16 +247,32 @@ button {
         text-align: left;
     }
 
-    .info-buttons {
-        flex-direction: column;
-        border-bottom: none;
-        justify-content: center;
-        gap: 20px;
+    .BS-info-buttons {
+        padding-left: 0;
     }
 
-    .info-buttons button {
-        border: 1px solid #38384f;
+    .BS-info-buttons button {
+        color: #fff;
+        padding-left: 1.5em;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 1.5em;
     }
+
+    .BS-info-buttons li {
+        border: 1px solid #38384f;
+        color: #838391;
+        list-style-position: inside;
+        padding-left: 1.5em;
+        font-family: spartan;
+        font-size: 12px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .button-one { list-style-type: "01";}
+    .button-two { list-style-type: "02";}
+    .button-three { list-style-type: "03";}
 
     .img-planet {
         justify-self: center;
