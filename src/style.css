@@ -124,6 +124,12 @@ button {
     justify-content: space-around;
     border-bottom: 1px solid #38384f;
     grid-area: buttons;
+    padding: 0px;
+    margin-top: 0;
+}
+
+.info-buttons li {
+    list-style: none;
 }
 
 .img-planet {

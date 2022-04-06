@@ -21,11 +21,11 @@ function App() {
 
     return (
       <div className="main-body">
-            <div className="info-buttons">
-                <button>Overview</button>
-                <button>Structure</button>
-                <button>Surface</button>
-            </div>
+            <ul className="info-buttons">
+                <li><button>Overview</button></li>
+                <li><button>Structure</button></li>
+                <li><button>Surface</button></li>
+            </ul>
             <img src={planet.images.planet} alt="mercury" className="img-planet" />
             <div className="info">
                 <h1 className="title">{planet.name}</h1>
