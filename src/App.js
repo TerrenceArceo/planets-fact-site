@@ -3,6 +3,7 @@ import {useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from "./MainComponents/Header";
 import Data from './data.json'
+import useWindowSize from './Helper/useWindowSize';
 
 import Earth from './MainComponents/planets/Earth'
 import Jupiter from './MainComponents/planets/Jupiter'
@@ -15,6 +16,7 @@ import Venus from './MainComponents/planets/Venus'
 
 function App() {
   const [planets, setPlanets] = useState(Data)
+  const size = useWindowSize()
 
   function body(index) {
     const planet = planets[index]

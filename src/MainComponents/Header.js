@@ -2,7 +2,7 @@
 
 import {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import useWindowSize from './useWindowSize'
+import useWindowSize from '../Helper/useWindowSize'
 
 export default function Header(props) {
     const [isShown, setIsShown] = useState(false)
