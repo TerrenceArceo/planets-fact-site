@@ -94,7 +94,7 @@ button {
     margin-right: 10px;
 }
 
-.mercury-dot { background-color: var(--clr-mercury); }
+.mercury-dot { background-color: var(-jupiterrcury); }
 .venus-dot { background-color: var(--clr-venus); }
 .earth-dot { background-color: var(--clr-earth); }
 .mars-dot { background-color: var(--clr-mars); }
@@ -102,6 +102,23 @@ button {
 .saturn-dot { background-color: var(--clr-saturn); }
 .uranus-dot { background-color: var(--clr-uranus); }
 .neptune-dot { background-color: var(--clr-neptune); }
+
+.mercur:hover
+.mercury:focus { border-bottom: 4px solid var(--clr-mercury);}
+.venus:hover,
+.venus:focus { border-bottom: 4px solid var(--clr-venus);}
+.earth:hover,
+.earth:focus { border-bottom: 4px solid var(--clr-earth);}
+.mars:hover,
+.mars:focus { border-bottom: 4px solid var(--clr-mars);}
+.jupiter:hover,
+.jupiter:focus { border-bottom: 4px solid var(--clr-jupiter);}
+.saturn:hover,
+.saturn:focus { border-bottom: 4px solid var(--clr-saturn);}
+.uranus:hover,
+.uranus:focus { border-bottom: 4px solid var(--clr-uranus);}
+.neptune:hover,
+.neptune:focus { border-bottom: 4px solid var(--clr-neptune);}
 
 
 /* --------- */
@@ -124,12 +141,6 @@ button {
     justify-content: space-around;
     border-bottom: 1px solid #38384f;
     grid-area: buttons;
-    padding: 0px;
-    margin-top: 0;
-}
-
-.info-buttons li {
-    list-style: none;
 }
 
 .img-planet {

@@ -34,11 +34,11 @@ function App() {
     return (
       <div className="main-body">
           {size.width < 480 ? 
-            <ul className="info-buttons">
-                <li><button>Overview</button></li>
-                <li><button>Structure</button></li>
-                <li><button>Surface</button></li>
-            </ul> 
+            <div className="info-buttons">
+                <button className={`${planetColor[index]}`}>Overview</button>
+                <button className={`${planetColor[index]}`}>Structure</button>
+                <button className={`${planetColor[index]}`}>Surface</button>
+            </div> 
             :
             <div className="BS-info-buttons">
                 <button className={`button-one ${planetColor[index]}`}>Overview</button>
