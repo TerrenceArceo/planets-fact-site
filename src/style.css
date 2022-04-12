@@ -209,6 +209,39 @@ button {
         width: 90%;
     }
 
+    .mercury:hover,
+    .mercury:focus {
+        background-color: var(--clr-mercury);
+    }
+    .venus:hover,
+    .venus:focus { 
+        background-color: var(--clr-venus);
+    }
+    .earth:hover,
+    .earth:focus { 
+        background-color: var(--clr-earth);
+    }
+    .mars:hover,
+    .mars:focus { 
+        background-color: var(--clr-mars);
+    }
+    .jupiter:hover,
+    .jupiter:focus { 
+        background-color: var(--clr-jupiter);
+    }
+    .saturn:hover,
+    .saturn:focus { 
+        background-color: var(--clr-saturn);
+    }
+    .uranus:hover,
+    .uranus:focus { 
+        background-color: var(--clr-uranus);
+    }
+    .neptune:hover,
+    .neptune:focus { 
+        background-color: var(--clr-neptune);
+    }
+
     .header {
         display: flex;
         flex-direction: column;

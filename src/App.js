@@ -16,6 +16,16 @@ import Venus from './MainComponents/planets/Venus'
 
 function App() {
   const [planets, setPlanets] = useState(Data)
+  const [planetColor, setPlanetColor] = useState([
+    "mercury",
+    "venus",
+    "earth",
+    "mars",
+    "jupiter",
+    "saturn",
+    "uranus",
+    "neptune"
+  ])
   const size = useWindowSize()
 
   function body(index) {
@@ -23,44 +33,44 @@ function App() {
 
     return (
       <div className="main-body">
-            {size.width < 480 ? 
-              <ul className="info-buttons">
-                  <li><button>Overview</button></li>
-                  <li><button>Structure</button></li>
-                  <li><button>Surface</button></li>
-              </ul> 
-              :
-              <ol className="BS-info-buttons">
-                  <li className='button-one'><button>Overview</button></li>
-                  <li className='button-two'><button>Internal structure</button></li>
-                  <li className='button-three'><button>Surface Geology</button></li>
-              </ol>
-            }
-            <img src={planet.images.planet} alt="mercury" className="img-planet" />
-            <div className="info">
-                <h1 className="title">{planet.name}</h1>
-                <p className="description">{planet.overview.content}</p>
-                <p className="description">Source : <a href={planet.overview.source} className="wiki-link">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
-            </div>
-            <div className='footer'>
-                <div className='footer-info'>
-                    <p>rotation time</p>
-                    <h3>{planet.rotation}</h3>
-                </div>
-                <div className='footer-info'>
-                    <p>revolution time</p>
-                    <h3>{planet.revolution}</h3>
-                </div>
-                <div className='footer-info'>
-                    <p>radius</p>
-                    <h3>{planet.radius}</h3>
-                </div>
-                <div className='footer-info'>
-                    <p>average temp.</p>
-                    <h3>{planet.temperature}</h3>
-                </div>
-            </div>
-        </div>
+          {size.width < 480 ? 
+            <ul className="info-buttons">
+                <li><button>Overview</button></li>
+                <li><button>Structure</button></li>
+                <li><button>Surface</button></li>
+            </ul> 
+            :
+            <ol className="BS-info-buttons">
+                <li className={`button-one ${planetColor[index]}`}><button>Overview</button></li>
+                <li className={`button-two ${planetColor[index]}`}><button>Internal structure</button></li>
+                <li className={`button-three ${planetColor[index]}`} ><button>Surface Geology</button></li>
+            </ol>
+          }
+          <img src={planet.images.planet} alt="mercury" className="img-planet" />
+          <div className="info">
+              <h1 className="title">{planet.name}</h1>
+              <p className="description">{planet.overview.content}</p>
+              <p className="description">Source : <a href={planet.overview.source} className="wiki-link">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+          </div>
+          <div className='footer'>
+              <div className='footer-info'>
+                  <p>rotation time</p>
+                  <h3>{planet.rotation}</h3>
+              </div>
+              <div className='footer-info'>
+                  <p>revolution time</p>
+                  <h3>{planet.revolution}</h3>
+              </div>
+              <div className='footer-info'>
+                  <p>radius</p>
+                  <h3>{planet.radius}</h3>
+              </div>
+              <div className='footer-info'>
+                  <p>average temp.</p>
+                  <h3>{planet.temperature}</h3>
+              </div>
+          </div>
+      </div>
     )
   }
 
