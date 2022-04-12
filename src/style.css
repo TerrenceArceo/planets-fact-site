@@ -210,37 +210,21 @@ button {
     }
 
     .mercury:hover,
-    .mercury:focus {
-        background-color: var(--clr-mercury);
-    }
     .venus:hover,
-    .venus:focus { 
-        background-color: var(--clr-venus);
-    }
     .earth:hover,
-    .earth:focus { 
-        background-color: var(--clr-earth);
-    }
     .mars:hover,
-    .mars:focus { 
-        background-color: var(--clr-mars);
-    }
     .jupiter:hover,
-    .jupiter:focus { 
-        background-color: var(--clr-jupiter);
-    }
     .saturn:hover,
-    .saturn:focus { 
-        background-color: var(--clr-saturn);
-    }
     .uranus:hover,
-    .uranus:focus { 
-        background-color: var(--clr-uranus);
-    }
-    .neptune:hover,
-    .neptune:focus { 
-        background-color: var(--clr-neptune);
-    }
+    .neptune:hover { background-color: #838391;}
+    .mercury:focus { background-color: var(--clr-mercury);}
+    .venus:focus { background-color: var(--clr-venus);}
+    .earth:focus { background-color: var(--clr-earth);}
+    .mars:focus { background-color: var(--clr-mars);}
+    .jupiter:focus { background-color: var(--clr-jupiter);}
+    .saturn:focus { background-color: var(--clr-saturn);}
+    .uranus:focus { background-color: var(--clr-uranus);}
+    .neptune:focus { background-color: var(--clr-neptune);}
 
     .header {
         display: flex;
@@ -282,30 +266,49 @@ button {
 
     .BS-info-buttons {
         padding-left: 0;
+        font-family: spartan;
+        margin-top: 35px;
     }
 
     .BS-info-buttons button {
         color: #fff;
-        padding-left: 1.5em;
         font-size: 12px;
         font-weight: 400;
         padding: 1.5em;
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        margin-top: 20px;
+        border: 1px solid #38384f;
     }
 
-    .BS-info-buttons li {
+    /* .BS-info-buttons li {
         border: 1px solid #38384f;
         color: #838391;
         list-style-position: inside;
         padding-left: 1.5em;
-        font-family: spartan;
+        
         font-size: 12px;
         margin-top: 20px;
         cursor: pointer;
-    }
+        
+    } */
 
-    .button-one { list-style-type: "01";}
-    .button-two { list-style-type: "02";}
-    .button-three { list-style-type: "03";}
+    .button-one:before { 
+        content: "01";
+        color: #838391;
+        padding-right: 1em;
+    }
+    .button-two:before { 
+        content: "02";
+        color: #838391;
+        padding-right: 1em;
+    }
+    .button-three:before { 
+        content: "03";
+        color: #838391;
+        padding-right: 1em;
+    }
 
     .img-planet {
         justify-self: center;

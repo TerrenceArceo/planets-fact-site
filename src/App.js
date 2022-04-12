@@ -40,11 +40,11 @@ function App() {
                 <li><button>Surface</button></li>
             </ul> 
             :
-            <ol className="BS-info-buttons">
-                <li className={`button-one ${planetColor[index]}`}><button>Overview</button></li>
-                <li className={`button-two ${planetColor[index]}`}><button>Internal structure</button></li>
-                <li className={`button-three ${planetColor[index]}`} ><button>Surface Geology</button></li>
-            </ol>
+            <div className="BS-info-buttons">
+                <button className={`button-one ${planetColor[index]}`}>Overview</button>
+                <button className={`button-two ${planetColor[index]}`}>Internal structure</button>
+                <button className={`button-three ${planetColor[index]}`}>Surface Geology</button>
+            </div>
           }
           <img src={planet.images.planet} alt="mercury" className="img-planet" />
           <div className="info">
