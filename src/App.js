@@ -33,19 +33,11 @@ function App() {
 
     return (
       <div className="main-body">
-          {size.width < 480 ? 
-            <div className="info-buttons">
-                <button className={`${planetColor[index]}`}>Overview</button>
-                <button className={`${planetColor[index]}`}>Structure</button>
-                <button className={`${planetColor[index]}`}>Surface</button>
-            </div> 
-            :
-            <div className="BS-info-buttons">
-                <button className={`button-one ${planetColor[index]}`}>Overview</button>
-                <button className={`button-two ${planetColor[index]}`}>Internal structure</button>
-                <button className={`button-three ${planetColor[index]}`}>Surface Geology</button>
-            </div>
-          }
+          <div className="BS-info-buttons">
+              <button className={`button-one ${planetColor[index]}`}>Overview</button>
+              <button className={`button-two ${planetColor[index]}`}>{size.width >= 480 ? "Internal Structure" : "structure"}</button>
+              <button className={`button-three ${planetColor[index]}`}>{size.width >= 480 ? "Surface Geology" : "surface"}</button>
+          </div>
           <img src={planet.images.planet} alt="mercury" className="img-planet" />
           <div className="info">
               <h1 className="title">{planet.name}</h1>
