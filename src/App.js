@@ -15,6 +15,7 @@ import Uranus from './MainComponents/planets/Uranus'
 import Venus from './MainComponents/planets/Venus'
 
 function App() {
+  const [selectedButton, setSelectedButton] = useState('overview')
   const [planets, setPlanets] = useState(Data)
   const [planetColor, setPlanetColor] = useState([
     "mercury",
@@ -110,3 +111,8 @@ function App() {
 }
 
 export default App;
+
+
+// 1. declare a state called selectedButton with a default "overview"
+// 2. create 3 anonymous functions inside an onClick for each button that will change the state to "overview", "structure", "surface"
+// 3. create conditional statements inside curly brackets and have conditions depending on what the state currently is.
