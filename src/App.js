@@ -32,18 +32,44 @@ function App() {
   function body(index) {
     const planet = planets[index]
 
+    function description() {
+      if (selectedButton === 'overview') {
+        return (
+          <>
+            <p className="description">{planet.overview.content}</p>
+            <p className="description">Source : <a href={planet.overview.source} className="wiki-link">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+          </>
+        )
+      } else if (selectedButton === 'structure') {
+        return (
+          <>
+            <p className="description">{planet.structure.content}</p>
+            <p className="description">Source : <a href={planet.structure.source} className="wiki-link">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+          </>
+        )
+      } else if (selectedButton === 'geology') {
+        return (
+          <>
+            <p className="description">{planet.geology.content}</p>
+            <p className="description">Source : <a href={planet.geology.source} className="wiki-link">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+          </>
+        )
+      }
+    }
+
     return (
       <div className="main-body">
           <div className="BS-info-buttons">
-              <button className={`button-one ${planetColor[index]}`}>Overview</button>
-              <button className={`button-two ${planetColor[index]}`}>{size.width >= 480 ? "Internal Structure" : "structure"}</button>
-              <button className={`button-three ${planetColor[index]}`}>{size.width >= 480 ? "Surface Geology" : "surface"}</button>
+              <button className={`button-one ${planetColor[index]}`} onClick={() => setSelectedButton('overview')}>Overview</button>
+
+              <button className={`button-two ${planetColor[index]}`} onClick={() => setSelectedButton('structure')}>{size.width >= 480 ? "Internal Structure" : "structure"}</button>
+
+              <button className={`button-three ${planetColor[index]}`} onClick={() => setSelectedButton('geology')}>{size.width >= 480 ? "Surface Geology" : "surface"}</button>
           </div>
           <img src={planet.images.planet} alt="mercury" className="img-planet" />
           <div className="info">
               <h1 className="title">{planet.name}</h1>
-              <p className="description">{planet.overview.content}</p>
-              <p className="description">Source : <a href={planet.overview.source} className="wiki-link">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+              {description()}
           </div>
           <div className='footer'>
               <div className='footer-info'>
