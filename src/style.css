@@ -266,6 +266,12 @@ button {
         color: #fff;
         border-bottom: none;
         width: auto;
+        opacity: 0.75;
+    }
+
+    .header-navigation-planets a:hover,
+    .header-navigation-planets a:focus {
+        opacity: unset;
     }
 
     .planet span { display: none ;}
