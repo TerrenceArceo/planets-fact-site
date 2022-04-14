@@ -68,6 +68,7 @@ button {
     position: absolute;
     background-color: #070724;
     width: 100vw;
+    z-index: 2;
 }
 
 .header-navigation-planets a {
@@ -146,6 +147,16 @@ button {
 .img-planet {
     grid-area: planet;
     align-self: center;
+}
+
+.img-planet-geology {
+    grid-area: planet;
+    width: 200px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    z-index: 1;
+    margin-top: 10em;
 }
 
 .info {
@@ -302,18 +313,6 @@ button {
         border: 1px solid #38384f;
     }
 
-    /* .BS-info-buttons li {
-        border: 1px solid #38384f;
-        color: #838391;
-        list-style-position: inside;
-        padding-left: 1.5em;
-        
-        font-size: 12px;
-        margin-top: 20px;
-        cursor: pointer;
-        
-    } */
-
     .button-one:before { 
         content: "01";
         color: #838391;
@@ -332,6 +331,16 @@ button {
 
     .img-planet {
         justify-self: center;
+    }
+
+    .img-planet-geology {
+        grid-area: planet;
+        width: 200px;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        z-index: 1;
+        margin-top: 25em;
     }
 
     .footer {
@@ -390,14 +399,20 @@ button {
         margin-right: 25px;
     }
 
+    .img-planet-geology {
+        grid-area: planet;
+        width: 200px;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        z-index: 1;
+        margin-top: 25em;
+    }
+
     .info {
         display: flex;
         flex-direction: column;
         padding: 0;
-    }
-
-    .img-planet {
-        justify-self: center;
     }
 
     .footer-info {

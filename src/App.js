@@ -37,21 +37,36 @@ function App() {
         return (
           <>
             <p className="description">{planet.overview.content}</p>
-            <p className="description">Source : <a href={planet.overview.source} className="wiki-link">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+            <p className="description">Source : <a href={planet.overview.source} className="wiki-link" target="_blank">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
           </>
         )
       } else if (selectedButton === 'structure') {
         return (
           <>
             <p className="description">{planet.structure.content}</p>
-            <p className="description">Source : <a href={planet.structure.source} className="wiki-link">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+            <p className="description">Source : <a href={planet.structure.source} className="wiki-link" target="_blank">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
           </>
         )
       } else if (selectedButton === 'geology') {
         return (
           <>
             <p className="description">{planet.geology.content}</p>
-            <p className="description">Source : <a href={planet.geology.source} className="wiki-link">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+            <p className="description">Source : <a href={planet.geology.source} className="wiki-link" target="_blank">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+          </>
+        )
+      }
+    }
+
+    function planetImage() {
+      if (selectedButton === 'overview') {
+        return <img src={planet.images.planet} alt="mercury" className="img-planet" />
+      } else if (selectedButton === 'structure') {
+        return <img src={planet.images.internal} alt="mercury" className="img-planet" />
+      } else if (selectedButton === 'geology') {
+        return (
+          <>
+            <img src={planet.images.planet} alt="mercury" className="img-planet" />
+            <img src={planet.images.geology} alt="mercury" className="img-planet-geology" />
           </>
         )
       }
@@ -66,7 +81,7 @@ function App() {
 
               <button className={`button-three ${planetColor[index]}`} onClick={() => setSelectedButton('geology')}>{size.width >= 480 ? "Surface Geology" : "surface"}</button>
           </div>
-          <img src={planet.images.planet} alt="mercury" className="img-planet" />
+          {planetImage()}
           <div className="info">
               <h1 className="title">{planet.name}</h1>
               {description()}
