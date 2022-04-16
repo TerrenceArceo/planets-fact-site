@@ -37,21 +37,21 @@ function App() {
         return (
           <>
             <p className="description">{planet.overview.content}</p>
-            <p className="description">Source : <a href={planet.overview.source} className="wiki-link" target="_blank">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+            <p className="description">Source : <a href={planet.overview.source} className="wiki-link" target="_blank">Wikipedia</a> <img src="./planets-fact-site/assets/icon-source.svg"/></p>
           </>
         )
       } else if (selectedButton === 'structure') {
         return (
           <>
             <p className="description">{planet.structure.content}</p>
-            <p className="description">Source : <a href={planet.structure.source} className="wiki-link" target="_blank">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+            <p className="description">Source : <a href={planet.structure.source} className="wiki-link" target="_blank">Wikipedia</a> <img src="./planets-fact-site/assets/icon-source.svg"/></p>
           </>
         )
       } else if (selectedButton === 'geology') {
         return (
           <>
             <p className="description">{planet.geology.content}</p>
-            <p className="description">Source : <a href={planet.geology.source} className="wiki-link" target="_blank">Wikipedia</a> <img src="/assets/icon-source.svg"/></p>
+            <p className="description">Source : <a href={planet.geology.source} className="wiki-link" target="_blank">Wikipedia</a> <img src="./planets-fact-site/assets/icon-source.svg"/></p>
           </>
         )
       }
